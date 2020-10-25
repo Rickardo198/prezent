@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Wszystkiego najlepszego!</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <meta charset="utf-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: calc(100vw - 20px);
+            height: 100vh;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+        .bg{
+            background: url("bg.png") no-repeat;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -2;
+        }
+        .wrapper{
+            max-width: 1100px;
+            margin-top: 30px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .cardWrapper{
+            width: 350px;
+            height: 400px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .bgWrapper{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
+            background: rgba(255, 255, 255, .55);
+            filter: blur(30);
+            z-index: -1;
+            border-radius: 5px;
+        }
+        .wrapperImg{
+            width: 80%;
+            height: 200px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        .wrapperTitle{
+            margin-top: 20px;
+            font-size: 36px;
+            letter-spacing: .6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="wrapper">
+        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/1.jpg" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">SWETER </p>
+        </div>
+        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/2.png" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">KOLCZYKI</p>
+        </div>
+        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/3.png" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">KOLCZYKI</p>
+        </div>
+        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/4.png" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">KOLCZYKI</p>
+        </div>
+        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/5.jpg" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">KALENDARZ</p>
+        </div>
+        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/6.jpg" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">KALENDARZ</p>
+        </div>
+        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/7.png" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">KSIĄŻKA</p>
+        </div>
+        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/8.png" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">KALENDARZ</p>
+        </div>
+        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/9.webp" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">KOSMETYKI</p>
+        </div>        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/10.webp" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">KOSMETYKI</p>
+        </div>        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/11.jpg" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">BLUZA</p>
+        </div>        <div class="cardWrapper">
+            <div class="bgWrapper"></div>
+            <img src="gifcik/12.webp" alt="obrazki" class="wrapperImg">
+            <p class="wrapperTitle">WINO</p>
+        </div>
+    </div>
+</body>
+</html>
