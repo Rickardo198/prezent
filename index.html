@@ -19,12 +19,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         .bgVideo{
-            width: 100vw;
-            height: 100vh;
+            min-width: 100vw;
+            min-height: 100vh;
             box-sizing: border-box;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
         }
@@ -32,7 +33,7 @@
             width: 100vw;
             height: 100vh;
             box-sizing: border-box;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             background: rgba(0,0,0,.4);
@@ -107,7 +108,9 @@
     </style>
 </head>
 <body>
-    <video class="bgVideo" src="film.mp4"></video>
+    <video class="bgVideo">
+        <source src="film.mp4" type="video/mp4">
+    </video>
     <div class="overlay"></div>
     <header class="header">
         <h1 class="title">Wszystkiego najlepszego <span class="bigger">Weronika</span>!</h1>
@@ -122,14 +125,23 @@
     let input = document.getElementById("anserw");
     let video = document.querySelector(".bgVideo");
     let valueInput;
-    btn.addEventListener('click', () => {
+    function checkFunction(){
         valueInput = input.value.toLowerCase();
         if(valueInput == "samochód" || valueInput == "samochód rafała"){
             document.querySelector(".header").style.opacity = 0;
             document.querySelector(".overlay").style.opacity = 0;
             video.play();
+
         }else{
             document.querySelector(".error").style.opacity = 1;
+        }
+    }
+    btn.addEventListener('click', () => {
+        checkFunction();
+    });
+    input.addEventListener('keypress', function(e){
+        if (e.key === "Enter") {
+         checkFunction();
         }
     });
 </script>

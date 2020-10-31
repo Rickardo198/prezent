@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Wszystkiego najlepszego!</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <meta charset="utf-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            box-sizing: border-box;
+            font-family: 'Itim', cursive;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bgVideo{
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .overlay{
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,.4);
+            transition: all .3s ease-out;
+        }
+        .header{
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s ease-out;
+        }
+        .title{
+            color: rgb(238, 238, 238);
+            font-size: 80px;
+        }
+        .bigger{
+            font-size: 110px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .subtitle{
+            margin-top: 25px;
+            font-size: 35px;
+            color: rgb(238, 238, 238);
+        }
+        #anserw{
+            width: 800px;
+            background: none;
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px 15px;
+            margin-top: 100px;
+            border-radius: 30px;
+            outline: none;
+            transition: all .2s ease-in;
+        }
+        #anserw::placeholder{
+            color: #fff;
+        }
+        #anserw:focus{
+             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+        #anserwBtn{
+            width: 250px;
+            padding: 5px 7.5px;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            background: #fff;
+            color: #222;
+            font-size: 20px;
+            margin-top: 10px;
+            outline: none;
+            transition: all .2s ease-in;
+        }
+        #anserwBtn:hover{
+            cursor: pointer;
+            background: none;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+        .error{
+            font-size: 20px;
+            color: #fff;
+            padding: 10px 0;
+            margin-top: 10px;
+            opacity: 0;
+            transition: all .3s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <video class="bgVideo" src="film.mp4"></video>
+    <div class="overlay"></div>
+    <header class="header">
+        <h1 class="title">Wszystkiego najlepszego <span class="bigger">Weronika</span>!</h1>
+        <h2 class="subtitle">Odpowiedz na pytanie, by poznać swoje życzenia urodzinowe.</h2>
+        <input type="text" id="anserw" placeholder="Miejsce, w którym wraz z swoim przyjacielem przeżyłaś wiele wspaniałych chwil?">
+        <p class="error">Spróbuj jeszcze raz :D</p>
+        <input type="submit" id="anserwBtn">
+    </header>
+</body>
+<script>
+    let btn = document.getElementById("anserwBtn");
+    let input = document.getElementById("anserw");
+    let video = document.querySelector(".bgVideo");
+    let valueInput;
+    function checkFunction(){
+        valueInput = input.value.toLowerCase();
+        if(valueInput == "samochód" || valueInput == "samochód rafała"){
+            document.querySelector(".header").style.opacity = 0;
+            document.querySelector(".overlay").style.opacity = 0;
+            video.play();
+        }else{
+            document.querySelector(".error").style.opacity = 1;
+        }
+    }
+    btn.addEventListener('click', () => {
+        checkFunction();
+    });
+    btn.addEventListener('keypress', (e) =>{
+        if (e.key === "Enter") {
+         checkFunction();
+        }
+    });
+</script>
+</html>
