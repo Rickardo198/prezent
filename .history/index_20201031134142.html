@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Wszystkiego najlepszego!</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <meta charset="utf-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bgVideo{
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .header{
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <video class="bgVideo" src="film.mp4"></video>
+    <header class="header">
+        <h1 class="title">Wszystkiego najlepszego Weronika!</h1>
+        <h2 class="subtitle">Odpowiedz na pytanie by poznać swoje życzenia urodzinowe</h2>
+    </header>
+</body>
+</html>
